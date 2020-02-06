@@ -1,13 +1,10 @@
 package com.digi.petclinic.owner_service.entity;
 
-import java.time.LocalDate;
 import java.util.*;
 
 import javax.persistence.*;
 
-import org.springframework.beans.support.MutableSortDefinition;
-import org.springframework.beans.support.PropertyComparator;
-import org.springframework.format.annotation.DateTimeFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "pets")
@@ -24,9 +21,10 @@ public class Pet extends NamedEntity {
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
+    @JsonIgnore
     private Owner owner;
 
-    @Transient
+//    @Transient
 //    private Set<Visit> visits = new LinkedHashSet<>();
 
     public void setBirthDate(final Date birthDate) {

@@ -1,4 +1,3 @@
-
 server:
   port: 8008
 
@@ -6,10 +5,8 @@ spring:
   application:
     name: owner_service
   datasource:
-    #url: jdbc:h2:mem:veterian
-    #username: sa
-    #password:
-#    url: jdbc:mysql://localhost/petclinic_ms_test
+    url: jdbc:h2:mem:owner
+#    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/ad_2020ffc791f1c2c?user=b2e5f907de0ef6&password=c926be73
 #    username: root
 #    password: root1234
     schema: classpath*:hsqldb/schema.sql
@@ -18,10 +15,10 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+#      ddl-auto: none
+#      ddl-auto: update
+      ddl-auto: create
       show-sql: true
-#     ddl-auto: update
-#    show-sql: true
   h2:
     console:
       enabled: true
