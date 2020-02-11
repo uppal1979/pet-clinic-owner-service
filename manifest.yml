@@ -1,6 +1,6 @@
 applications:
 - name: pet-clinic-owner-service
-  path: ./target/owner_service-0.0.1-SNAPSHOT.jar
+  #path: ./target/owner_service-0.0.1-SNAPSHOT.jar
   random-route: true
   memory: 500M
   disk_quota: 500M
