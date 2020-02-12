@@ -5,7 +5,6 @@ applications:
   memory: 500M
   disk_quota: 500M
   instances: 1
-  buildpack: 'v4.26-offline-https://github.com/cloudfoundry/java-buildpack.git#e06e00b java-main java-opts java-security'
   env:
     JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
   services:
